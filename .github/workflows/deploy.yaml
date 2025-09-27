@@ -1,0 +1,45 @@
+name: Deploy React CSR
+on: 
+  push:
+  workflow_dispatch:
+jobs:
+  lint:
+    # bun run lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v4
+
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.2.18
+
+      - name: Install deps
+        run:  bun Install
+
+      - name: lint
+        run: bun run lint
+
+  deploy:
+    runs-on: ubuntu-lateststeps
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v5
+
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.2.18
+
+      - name: Install deps
+        run: bun i
+
+      - name: Build
+        run: bun run Build
+        
+      - name: List dish/
+        run: ls dist
+
+      - name: Deploy  
+        run: echo "Deploying..."
