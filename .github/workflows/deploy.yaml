@@ -69,7 +69,7 @@ jobs:
     steps:
       - name: Discord notification
         env:
-          DISCORD_WEBHOOK: https://discord.com/api/webhooks/1421698984291991603/VdrXwbUyyniC8gJ3s96bnTuGjoT45tMWzq4bRd4pU11mVU8YaoxsQmR21yfhGzyysc7g
+          DISCORD_WEBHOOK: https://discord.com/api/webhooks/1421697869458706533/W2UqZa7gD95EU7ixa4gQN3QLz3pWc3oFepvpv16XWxfpuMMTTiqbNULZWrBBmPfPlYBY
         uses: Ilshidur/action-discord@master
         with:
-          args: 'Build fail for ${{ github.repository }} on branch ${{ github.ref }}. Commit: ${{ github.sha }} by ${{ github.actor }} - ${{ github.event.head_commit.message }} - ${{ github.event.head_commit.url }} '
+          args: 'Build fail by สุดหล่อ'
