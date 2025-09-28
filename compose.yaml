@@ -1,0 +1,8 @@
+services:
+  web:
+    image: opomp1/gh-workshop
+    container_name: react
+    ports:
+      -3000:3000
+    labels:
+      - com.host.description=label
