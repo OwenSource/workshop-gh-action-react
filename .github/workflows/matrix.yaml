@@ -1,0 +1,21 @@
+name: Matrix
+on: 
+  push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        bun_version: ["1.2.0", "1.2.18", "1.2.16"]
+        browser: ["firefox", "chrome", "safari"]
+        exclude:
+          - bun_version: "1.2.18"
+          - browser: "safari"
+        include:
+          - bun_version: "1.2.18"
+          - browser: "edge"
+          - bun_version: "1.1.0"
+          - browser: "safari"
+    steps:
+      - name: Print Bun verstion and test browser
+        run: echo "${{ matrix.bun_version }} - ${{ matrix.browser }}"        

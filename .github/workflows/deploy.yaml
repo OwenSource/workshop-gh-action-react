@@ -72,4 +72,4 @@ jobs:
           DISCORD_WEBHOOK: https://discord.com/api/webhooks/1421698984291991603/VdrXwbUyyniC8gJ3s96bnTuGjoT45tMWzq4bRd4pU11mVU8YaoxsQmR21yfhGzyysc7g
         uses: Ilshidur/action-discord@master
         with:
-          args: 'Build fail for ${{ github.repository }} on branch ${{ github.ref }}. Commit: ${{ github.sha }} by ${{ github.actor }} - ${{ github.event.head_commit.message }} - ${{ github.event.head_commit.url }} '
+          args: 'Build fail for ${{ github.repository }} on branch ${{ github.ref }}. Commit: ${{ github.sha }} by ${{ github.actor }} - ${{ github.event.head_commit.message }} - ${{ github.event.head_commit.url }}  '
